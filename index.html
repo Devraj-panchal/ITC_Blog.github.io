@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC - WIKIPAGE</title>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <center>
+        <h1 style="font-size:50px">SSH Protocol</h1>
+        <img src="1.jpg" width="70%" style="border: 5px solid; padding: 40px; border-radius: 50px;" >
+    </center>
+    <div style="margin: 35px;">
+        <div>
+            <h1>What is the SSH Protocol?</h1>
+            <p>Created in 1995 by <a href="https://fi.wikipedia.org/wiki/Tatu_Yl%C3%B6nen"> Tatu Ylönen</a>, SSH protocol, known also as Secure Shell or Secure Socket Shell, is a network protocol that gives system administrators a secure way to access remote assets over an unsecured network. SSH provides password or public-key based authentication and encrypts connections between two network endpoints. It is a secure alternative to legacy login protocols (such as telnet, rlogin) and insecure file transfer methods (such as FTP). In addition to providing strong encryption, SSH is widely used by network administrators to manage systems and applications remotely, deliver software patches,or execute commands and move files.</p>        
+        </div>
+        <br>
+        <div>
+            <h1>How SSH Protocol works ?</h1>
+            <p>To establish a connection between an SSH client and server, the client initiates the setup process and verifies the identity of the SSH server using public key cryptography. Once this verification is complete, the SSH protocol utilizes robust symmetric encryption and hashing algorithms to safeguard the confidentiality and authenticity of the data shared between the client and server.</p>
+            <ol>
+                <li>Client initiates connection to SSH server.</li>
+                <li>The server sends its public key to the client.</li>
+                <li>The server’s public key is saved in the client’s known hosts file.</li>
+                <li>The client and the server negotiate the connection parameters and establish connection.</li>
+            </ol>
+            <br>
+            <center><img src="2.png" width="50%" style="border: 5px dashed; padding: 40px; border-radius: 100px;"></center>
+            <br>
+            <p>When a client connects to a server, they go through a process to establish a secure connection. As part of this process, they agree on a specific symmetric encryption algorithm, such as <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> , to use for their communication and generate a key for encrypting and decrypting their data. To further enhance the security of the communication, the SSH protocol also utilizes strong hashing algorithms like <a href="https://en.wikipedia.org/wiki/SHA-2"> SHA-2</a> to ensure the integrity of the transmitted data.</p>
+        </div>
+        <br>
+        <div>
+            <h1>Common Use Cases for SSH Protocol</h1>
+            <p>SSH connections have mostly been used to secure different types of communications between a local machine and a remote host, including:</p>
+            <ul>
+                <li>Secure remote access to resources</li>
+                <li>Remote execution of commands</li>
+                <li>Delivery of software patches and updates</li>
+                <li>Interactive and automated file transfers</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h1>Disadvantages  of SSH</h1>
+            <p>While SSH (Secure Shell) is generally considered a secure and reliable protocol for remote access and file transfer, there are a few potential disadvantages to keep in mind:</p>
+            <ol>
+                <li><b>Complexity:</b> SSH can be complex to configure and use, especially for novice users. The command-line interface may also be intimidating to some users.</li> 
+                <li><b>Firewall and NAT traversal:</b> SSH can be problematic to use when traversing firewalls and <a href="https://en.wikipedia.org/wiki/Network_address_translation"> Network Address Translation (NAT)</a> devices, which can cause connection issues and require additional configuration.</li>
+                <li><b>Limited file transfer options:</b> While SSH includes some file transfer functionality (such as <a href="https://en.wikipedia.org/wiki/Secure_copy_protocol"> SCP</a> and <a href="https://en.wikipedia.org/wiki/Secure_file_transfer_protocol"> SFTP</a>), it may not be as feature-rich or convenient as dedicated file transfer protocols such as <a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol"> FTP</a> or <a href="https://en.wikipedia.org/wiki/HTTP"> HTTP</a>.</li>
+                <li><b>Limited support for remote access:</b> SSH may not be the best choice for remote access to <a href="https://en.wikipedia.org/wiki/Graphical_user_interface"> graphical user interfaces (GUIs)</a> or other interactive applications, as it is primarily designed for command-line access.</li>
+                <li><b>Overhead:</b> SSH uses encryption algorithms to protect data during transmission, which adds additional data to the original data in order to make it unreadable to anyone who intercepts it. SSH can have a higher overhead than other protocols, which can impact performance in certain situations.</li>
+            </ol>
+        </div>
+        <br>
+        <div>
+            <h1>Alternatives</h1>
+            <ol>
+                <li><b><a href="https://en.wikipedia.org/wiki/Telnet"> Telnet:</a></b> Telnet is a simple text-based protocol that allows remote access to command-line interfaces of remote systems. However, it lacks encryption and is considered less secure compared to SSH, as the data is transmitted in clear text, making it vulnerable to interception and eavesdropping.</li>
+                <li><b><a href="https://en.wikipedia.org/wiki/Remote_Desktop_Protocol"> RDP (Remote Desktop Protocol):</a></b> RDP is a proprietary protocol developed by Microsoft that provides remote access to graphical user interfaces (GUIs) of Windows-based systems. RDP allows for remote control and visualization of the desktop environment, which can be useful for tasks that require interaction with GUI-based applications.</li>
+                <li><b><a href="https://en.wikipedia.org/wiki/Virtual_Network_Computing"> VNC (Virtual Network Computing):</a></b> VNC is an open standard protocol that allows remote access to graphical desktop environments. VNC uses a client-server architecture and provides remote control and visualization of the desktop environment, similar to RDP, but it is platform-independent and can be used to access systems running various operating systems.</li>
+                <li><b><a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP (File Transfer Protocol):</a></b> FTP is a widely used protocol for transferring files over the internet. It provides a simple and straightforward way to transfer files between remote systems, but it lacks the encryption and security features of SSH, making it less secure for transferring sensitive data.</li>
+                <li><b><a href=""></a> Web-based interfaces:</b> Some systems provide web-based interfaces for remote access and file transfer, which can be accessed through a web browser. These interfaces may use HTTPS for encryption and authentication, providing a secure way to access remote systems through a web interface.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
